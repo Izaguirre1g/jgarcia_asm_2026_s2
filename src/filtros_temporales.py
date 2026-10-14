@@ -34,3 +34,24 @@ def polos_ceros(sos):
     z, p, k = sos2zpk(sos)
     radio_max = float(np.max(np.abs(p)))
     return z, p, k, radio_max, bool(radio_max < 1.0)
+
+def aplicar_sos_manual(sos, x):
+    """Aplica la cascada de biquads muestra a muestra (forma directa II transpuesta).
+
+    Para cada sección, con b0,b1,b2,a1,a2 y estados s1,s2:
+        y  = b0*x + s1
+        s1 = b1*x - a1*y + s2
+        s2 = b2*x - a2*y
+    La salida de una sección es la entrada de la siguiente.
+    Los estados parten de cero, igual que en sosfilt.
+    """
+    y = np.asarray(x, dtype=np.float64).copy()
+    for b0, b1, b2, a0, a1, a2 in sos:
+        s1 = s2 = 0.0
+        for n in range(len(y)):
+            xn = y[n]
+            yn = b0 * xn + s1
+            s1 = b1 * xn - a1 * yn + s2
+            s2 = b2 * xn - a2 * yn
+            y[n] = yn
+    return y
