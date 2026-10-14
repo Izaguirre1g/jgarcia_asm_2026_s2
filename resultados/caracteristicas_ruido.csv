@@ -1,0 +1,7 @@
+caso,fuente,tipo_ruido,curtosis_exceso,planicidad_espectral,pico_sobre_mediana_dB,ancho_banda_95_Hz
+caso_1,ruido_aislado,tonal,-1.5,0.0,120.0,7.812
+caso_1,contaminada,tonal,-0.768,0.0,120.0,1316.406
+caso_2,ruido_aislado,blanco,0.01,0.988,1.918,7589.844
+caso_2,contaminada,blanco,-0.694,0.243,34.271,6734.375
+caso_3,ruido_aislado,banda,-0.01,0.0,120.0,738.281
+caso_3,contaminada,banda,-0.678,0.0,120.0,957.031
