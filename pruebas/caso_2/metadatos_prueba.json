@@ -1,0 +1,35 @@
+{
+  "fs_Hz": 16000,
+  "duracion_s": 6.0,
+  "pico_maximo": 0.8,
+  "fade_ms": 20,
+  "tipo_senal": "multitono",
+  "frecuencias_utiles_Hz": [
+    440,
+    880,
+    1320
+  ],
+  "amplitudes_utiles": [
+    1.0,
+    0.55,
+    0.3
+  ],
+  "fases_grados": [
+    0,
+    35,
+    -50
+  ],
+  "snr_objetivo_dB": 5.0,
+  "numero_impulsos": 10,
+  "frecuencia_interferencia_Hz": 1750,
+  "banda_ruido_Hz": [
+    2500,
+    3800
+  ],
+  "nombre": "caso_2_ruido_blanco",
+  "semilla": 20261002,
+  "tipo_ruido": "blanco",
+  "N": 96000,
+  "snr_obtenida_dB": 5.000000000000008,
+  "ganancia_comun": 0.25650190137228307
+}
