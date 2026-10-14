@@ -102,6 +102,32 @@
     "tipo_ruido": "banda",
     "N": 96000,
     "snr_obtenida_dB": 5.000000000000028,
-    "ganancia_comun": 0.24915198274099815
+    "ganancia_comun": 0.24915198274099848
+  },
+  "filtro_temporal": {
+    "caso_diseno": "caso_2",
+    "banda": "pasa_bajas",
+    "fp_Hz": 1500,
+    "f_stop_Hz": 2000,
+    "Rp_dB": 1.0,
+    "As_dB": 40.0,
+    "tolerancia_validacion": 1e-10,
+    "prototipo": "Elíptico",
+    "orden": 5,
+    "secciones_sos": 3,
+    "implementacion": "sos_forma_directa_II_transpuesta"
+  },
+  "filtrado_espectral": {
+    "n_bloque": 1024,
+    "solape": 0.5,
+    "ventana": "raiz_hann",
+    "alpha": 2.0,
+    "g_min": 0.1,
+    "calibracion_s": 2,
+    "n_est": 8192,
+    "kernel_piso_Hz": 250,
+    "umbral_pico_dB": 15,
+    "tolerancia_armonico_Hz": 5,
+    "ancho_rechazo_bins": 2
   }
 }
