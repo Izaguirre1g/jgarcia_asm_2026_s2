@@ -102,7 +102,14 @@
     "tipo_ruido": "banda",
     "N": 96000,
     "snr_obtenida_dB": 5.000000000000028,
-    "ganancia_comun": 0.24915198274099848
+    "ganancia_comun": 0.24915198274099815
+  },
+  "fundamentos_fft": {
+    "fs_Hz": 16000,
+    "n": 1024,
+    "f_bin_Hz": 437.5,
+    "f_entre_Hz": 445.3125,
+    "fase_grados": 35.0
   },
   "filtro_temporal": {
     "caso_diseno": "caso_2",
