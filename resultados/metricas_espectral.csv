@@ -1,4 +1,0 @@
-caso,metodo,N_bloque,alpha,interferencias_estimadas_Hz,MSE,SNR_entrada_dB,SNR_salida_dB,dSNR_dB,retardo_alineacion_muestras,MSE_alineado,SNR_alineada_dB,dSNR_alineada_dB,energia_util_conservada_%,atenuacion_interferencia_dB
-caso_1,espectral,1024,2.0,[1750.0],0.0004,5.0,23.8678,18.8678,0,0.0004,23.8678,18.8678,99.7581,19.6828
-caso_2,espectral,1024,2.0,[],0.0019,5.0,13.7674,8.7674,0,0.0019,13.7674,8.7674,99.2115,
-caso_3,espectral,1024,2.0,[],0.0027,5.0,11.9975,6.9975,0,0.0027,11.9975,6.9975,95.6017,

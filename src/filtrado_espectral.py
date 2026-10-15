@@ -66,3 +66,22 @@ def reducir_ruido_fft(x, fs, pn, f_interf, n_bloque=1024, alpha=2.0, g_min=0.1, 
         y[ini:ini + n_bloque] += np.fft.irfft(X * g, n=n_bloque) * w
         
     return y[hop:hop + len(x)], np.array(gains)
+
+def aplicar_ganancias_fft(x, gains, n_bloque=1024):
+    """Aplica ganancias por bloque ya calculadas a otra señal `x`.
+
+    Usa el mismo troceado, ventana y solapamiento que `reducir_ruido_fft`, pero sin
+    recalcular las ganancias. Sirve para pasar la señal limpia y el ruido por el mismo
+    sistema por separado: como las ganancias quedan fijas, el sistema es lineal y
+    salida(limpia) + salida(ruido) = salida(contaminada).
+    """
+    hop = n_bloque // 2
+    w = ventana_raiz_hann(n_bloque)
+    x = np.asarray(x, dtype=np.float64)
+    n_pad = (-(len(x) - n_bloque)) % hop if len(x) > n_bloque else n_bloque - len(x)
+    xp = np.concatenate([np.zeros(hop), x, np.zeros(n_pad + n_bloque)])
+    y = np.zeros_like(xp)
+    for i, ini in enumerate(range(0, len(xp) - n_bloque + 1, hop)):
+        X = np.fft.rfft(xp[ini:ini + n_bloque] * w)
+        y[ini:ini + n_bloque] += np.fft.irfft(X * gains[i], n=n_bloque) * w
+    return y[hop:hop + len(x)]

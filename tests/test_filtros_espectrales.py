@@ -1,6 +1,7 @@
 import numpy as np
 
-from src.filtrado_espectral import estimar_ruido_e_interferencia, reducir_ruido_fft
+from src.filtrado_espectral import (aplicar_ganancias_fft, estimar_ruido_e_interferencia,
+                                    reducir_ruido_fft)
 
 FS, N = 16000, 1024
 
@@ -40,3 +41,12 @@ def test_mejora_snr():
     pn, fint, _ = estimar_ruido_e_interferencia(x[:2 * FS], FS, N)
     y, _ = reducir_ruido_fft(x, FS, pn, fint, N)
     assert _snr(s, y) > _snr(s, x) + 6.0
+
+
+def test_ganancias_fijas_son_lineales():
+    # Pasar limpia e interferencia por separado con las mismas ganancias debe sumar la salida completa
+    limpia, x = _senales()
+    pn, fint, _ = estimar_ruido_e_interferencia(x[:2 * FS], FS, N)
+    y, G = reducir_ruido_fft(x, FS, pn, fint, N)
+    y_suma = aplicar_ganancias_fft(limpia, G, N) + aplicar_ganancias_fft(x - limpia, G, N)
+    assert np.max(np.abs(y_suma - y)) < 1e-10

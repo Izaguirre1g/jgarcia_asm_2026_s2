@@ -1,4 +1,0 @@
-caso,metodo,N_bloque,alpha,MSE,SNR_entrada_dB,SNR_salida_dB,dSNR_dB,retardo_alineacion_muestras,MSE_alineado,SNR_alineada_dB,dSNR_alineada_dB,energia_util_conservada_%,atenuacion_interferencia_dB
-caso_1,temporal_Elíptico,,,0.1249,5.0,-0.9684,-5.9684,6,0.004,14.0233,9.0233,84.1583,30.3594
-caso_2,temporal_Elíptico,,,0.0594,5.0,-1.1438,-6.1438,6,0.0042,10.335,5.335,84.8325,
-caso_3,temporal_Elíptico,,,0.066,5.0,-1.8539,-6.8539,6,0.0139,4.923,-0.077,86.2088,
