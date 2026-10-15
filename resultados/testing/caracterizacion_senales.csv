@@ -1,0 +1,4 @@
+caso,fs_Hz,N,duracion_s,frecuencias_utiles_Hz,tipo_ruido,semilla,SNR_objetivo_dB,SNR_obtenida_dB,error_dB
+caso_1,16000,96000,6.0,"[440, 880, 1320]",tonal,20261001,5.0,5.0,1.33e-14
+caso_2,16000,96000,6.0,"[440, 880, 1320]",blanco,20261002,5.0,5.0,7.99e-15
+caso_3,16000,96000,6.0,"[440, 880, 1320]",banda,20261003,5.0,5.0,2.84e-14

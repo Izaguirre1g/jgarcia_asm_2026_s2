@@ -1,0 +1,5 @@
+n_cal (FFT de calibración),régimen + E/S (KB),extra de calibración (KB),pico sin reutilizar buffers (KB),% de DRAM (320 KB),% de estática (160 KB)
+1024,20.0,12.0,32.0,10.0,20.0
+2048,22.0,24.0,46.0,14.4,28.8
+4096,26.0,48.0,74.0,23.1,46.3
+8192,34.0,96.0,130.0,40.6,81.3

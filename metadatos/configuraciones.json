@@ -1,0 +1,140 @@
+{
+  "caso_1": {
+    "fs_Hz": 16000,
+    "duracion_s": 6.0,
+    "pico_maximo": 0.8,
+    "fade_ms": 20,
+    "tipo_senal": "multitono",
+    "frecuencias_utiles_Hz": [
+      440,
+      880,
+      1320
+    ],
+    "amplitudes_utiles": [
+      1.0,
+      0.55,
+      0.3
+    ],
+    "fases_grados": [
+      0,
+      35,
+      -50
+    ],
+    "snr_objetivo_dB": 5.0,
+    "numero_impulsos": 10,
+    "frecuencia_interferencia_Hz": 1750,
+    "banda_ruido_Hz": [
+      2500,
+      3800
+    ],
+    "nombre": "caso_1_interferencia_sinusoidal",
+    "semilla": 20261001,
+    "tipo_ruido": "tonal",
+    "N": 96000,
+    "snr_obtenida_dB": 5.000000000000013,
+    "ganancia_comun": 0.3796343013444493
+  },
+  "caso_2": {
+    "fs_Hz": 16000,
+    "duracion_s": 6.0,
+    "pico_maximo": 0.8,
+    "fade_ms": 20,
+    "tipo_senal": "multitono",
+    "frecuencias_utiles_Hz": [
+      440,
+      880,
+      1320
+    ],
+    "amplitudes_utiles": [
+      1.0,
+      0.55,
+      0.3
+    ],
+    "fases_grados": [
+      0,
+      35,
+      -50
+    ],
+    "snr_objetivo_dB": 5.0,
+    "numero_impulsos": 10,
+    "frecuencia_interferencia_Hz": 1750,
+    "banda_ruido_Hz": [
+      2500,
+      3800
+    ],
+    "nombre": "caso_2_ruido_blanco",
+    "semilla": 20261002,
+    "tipo_ruido": "blanco",
+    "N": 96000,
+    "snr_obtenida_dB": 5.000000000000008,
+    "ganancia_comun": 0.25650190137228307
+  },
+  "caso_3": {
+    "fs_Hz": 16000,
+    "duracion_s": 6.0,
+    "pico_maximo": 0.8,
+    "fade_ms": 20,
+    "tipo_senal": "multitono",
+    "frecuencias_utiles_Hz": [
+      440,
+      880,
+      1320
+    ],
+    "amplitudes_utiles": [
+      1.0,
+      0.55,
+      0.3
+    ],
+    "fases_grados": [
+      0,
+      35,
+      -50
+    ],
+    "snr_objetivo_dB": 5.0,
+    "numero_impulsos": 10,
+    "frecuencia_interferencia_Hz": 1750,
+    "banda_ruido_Hz": [
+      700,
+      1500
+    ],
+    "nombre": "caso_3_banda_superpuesta",
+    "semilla": 20261003,
+    "tipo_ruido": "banda",
+    "N": 96000,
+    "snr_obtenida_dB": 5.000000000000028,
+    "ganancia_comun": 0.24915198274099815
+  },
+  "fundamentos_fft": {
+    "fs_Hz": 16000,
+    "n": 1024,
+    "f_bin_Hz": 437.5,
+    "f_entre_Hz": 445.3125,
+    "fase_grados": 35.0
+  },
+  "filtro_temporal": {
+    "caso_diseno": "caso_2",
+    "banda": "pasa_bajas",
+    "fp_Hz": 1500,
+    "f_stop_Hz": 2000,
+    "Rp_dB": 1.0,
+    "As_dB": 40.0,
+    "tolerancia_validacion": 1e-10,
+    "prototipo": "Elíptico",
+    "orden": 5,
+    "secciones_sos": 3,
+    "implementacion": "sos_forma_directa_II_transpuesta"
+  },
+  "filtrado_espectral": {
+    "n_bloque": 1024,
+    "solape": 0.5,
+    "ventana": "raiz_hann",
+    "alpha": 2.0,
+    "g_min": 0.1,
+    "calibracion_s": 2,
+    "n_est": 8192,
+    "kernel_piso_Hz": 250,
+    "umbral_pico_dB": 15,
+    "tolerancia_armonico_Hz": 5,
+    "ancho_rechazo_bins": 2
+  }
+}

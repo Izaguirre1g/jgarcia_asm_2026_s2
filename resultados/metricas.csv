@@ -1,0 +1,10 @@
+caso,metodo,N_bloque,alpha,MSE,SNR_entrada_dB,SNR_salida_dB,dSNR_dB,retardo_alineacion_muestras,MSE_alineado,SNR_alineada_dB,dSNR_alineada_dB,energia_util_conservada_%,atenuacion_ruido_dB,muestras_por_bloque,tiempo_bloque_us,interferencias_estimadas_Hz
+caso_1,sin_filtrar,,,0.0316,5.0,5.0,0.0,0,0.0316,5.0,0.0,100.0,0.0,,0.0,
+caso_1,temporal_Elíptico,,,0.1249,5.0,-0.9684,-5.9684,6,0.004,14.0233,9.0233,84.1583,30.3596,1024.0,41.6,
+caso_1,espectral,1024.0,2.0,0.0004,5.0,23.8678,18.8678,0,0.0004,23.8678,18.8678,99.7581,19.6086,512.0,51.5,[1750.0]
+caso_2,sin_filtrar,,,0.0144,5.0,5.0,0.0,0,0.0144,5.0,0.0,100.8318,0.0,,0.0,
+caso_2,temporal_Elíptico,,,0.0594,5.0,-1.1438,-6.1438,6,0.0042,10.335,5.335,84.8325,7.7035,1024.0,41.6,
+caso_2,espectral,1024.0,2.0,0.0019,5.0,13.7674,8.7674,0,0.0019,13.7674,8.7674,99.2115,8.9174,512.0,51.5,[]
+caso_3,sin_filtrar,,,0.0136,5.0,5.0,0.0,0,0.0136,5.0,0.0,102.4744,0.0,,0.0,
+caso_3,temporal_Elíptico,,,0.066,5.0,-1.8539,-6.8539,6,0.0139,4.923,-0.077,86.2088,0.4431,1024.0,41.6,
+caso_3,espectral,1024.0,2.0,0.0027,5.0,11.9975,6.9975,0,0.0027,11.9975,6.9975,95.6017,8.0777,512.0,51.5,[]
